@@ -4,21 +4,22 @@ export interface UserState {
     name: string;
 }
 
-const initialState: UserState = {
+const userInitialState: UserState = {
     name: ""
 };
 
-const user = (state: UserState = initialState, action: UserAction) => {
-    const { type, payload } = action;
+const userReducer = (state: UserState = userInitialState, action: UserAction) => {
+    const { type, user } = action;
 
     if (type === USER_SET_NAME)
         return {
-            name: payload.name
+            ...user
         };
 
     return state;
 };
 
 export {
-    user
+    userInitialState,
+    userReducer
 };
