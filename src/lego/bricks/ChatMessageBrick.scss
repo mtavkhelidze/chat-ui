@@ -1,0 +1,39 @@
+.chat-message-brick {
+  display: flex;
+  flex-direction: row;
+  height: 5em;
+
+  width: 80%;
+
+  margin-bottom: 2em;
+  margin-right: 1em;
+
+  .avatar {
+    padding: 0;
+    margin: 0;
+    width: 3em;
+    height: 3em;
+  }
+
+  .content {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    padding-left: 0.5em;
+
+    .byline {
+      margin-bottom: 0.5em;
+    }
+
+    > .text {
+      flex: 1;
+      border-bottom-left-radius: 20px;
+      border-top-right-radius: 20px;
+      border: 1px solid black;
+
+      padding: 0.5em;
+    }
+  }
+}

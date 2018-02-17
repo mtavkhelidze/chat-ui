@@ -5,7 +5,33 @@ export interface ChatState {
 }
 
 const chatInitialState: ChatState = {
-    messages: []
+    messages: [{
+        username: "Misha",
+        text: `
+        some text
+        some text
+        some text
+        some text
+        some text
+        some text
+        some text
+        some text
+        some text
+        some text
+        some text
+        some text
+        some text
+        some text
+        some text
+        some text
+        some text
+        some text
+        some text
+        some text
+        `,
+        avatar: "some avatar",
+        timestamp: 1000
+    }]
 };
 
 const chatReducer = (
