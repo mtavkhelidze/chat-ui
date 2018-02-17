@@ -1,4 +1,8 @@
-import { USER_SET_NAME, UserAction, UserState } from "./types";
+import { USER_SET_NAME, UserAction } from "./actions";
+
+export interface UserState {
+    name: string;
+}
 
 const initialState: UserState = {
     name: ""
