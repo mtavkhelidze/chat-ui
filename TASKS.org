@@ -1,0 +1,10 @@
+* DONE CIMUI-001 Scaffolding
+* CIMUI-011 User selector
+* CIMUI-012 Coolkies
+* CIMUI-020 Chat reducer
+* CIMUI-021 Socket.IO middlware
+* CIMUI-030 InputText
+* CIMUI-040 Button
+* CIMUI-050 InputTextArea
+* CIMUI-060 ChatMessage
+* CIMUI-070 Avatar
