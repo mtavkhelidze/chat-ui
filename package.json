@@ -1,0 +1,66 @@
+{
+  "name": "chat-ui",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Chat.IM Simple UI",
+  "scripts": {
+    "start": "webpack-dev-server --progress --color --inline --hot --contentBase dist --config webpack.config.js",
+    "build": "NODE_ENV=production webpack --config webpack.config.js",
+    "clean": "rm -fr dist",
+    "lint": "tslint --project .",
+    "test": "tape -r ts-node/register src/**/*.test.ts | tap-spec"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "redux",
+    "socket.io"
+  ],
+  "author": "Misha Tavkhelidze <misha.tavkhelidze@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mtavkhelidze/chai-ui"
+  },
+  "bugs": {
+    "url": "https://github.com/mtavkhelidze/react-tabula-rasa/issues"
+  },
+  "dependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "serve": "^6.4.9"
+  },
+  "devDependencies": {
+    "@types/deep-freeze": "^0.1.1",
+    "@types/node": "^8.0.46",
+    "@types/react": "^16.0.17",
+    "@types/react-dom": "^16.0.4",
+    "@types/socket.io": "^1.4.31",
+    "@types/tape": "^4.2.31",
+    "@types/uglify-js": "^2.6.29",
+    "@types/webpack": "^3.0.13",
+    "@types/webpack-merge": "^4.1.0",
+    "bootstrap": "^4.0.0",
+    "css-loader": "^0.28.7",
+    "deep-freeze": "0.0.1",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-plugin": "^2.30.1",
+    "html-webpack-template": "^5.6.0",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "socket.io-client": "^2.0.4",
+    "source-map-loader": "^0.2.2",
+    "style-loader": "^0.19.0",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.8.0",
+    "ts-loader": "^3.0.5",
+    "ts-node": "^3.3.0",
+    "tslint": "^5.9.1",
+    "tslint-eslint-rules": "^5.0.0",
+    "typescript": "^2.5.3",
+    "uglifyjs-webpack-plugin": "^1.0.0-beta.3",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.3",
+    "webpack-merge": "^4.1.0"
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "extends": [
+    "tslint:latest",
+    "tslint-eslint-rules"
+  ],
+  "rules": {
+    "trailing-comma": false,
+    "arrow-parens": [
+      true,
+      "ban-single-arg-parens"
+    ],
+    "array-type": [
+      true,
+      "array"
+    ],
+    "ban": [
+      true,
+      [
+        "_",
+        "forEach"
+      ],
+      [
+        "_",
+        "each"
+      ]
+    ],
+    "interface-name": false,
+    "interface-over-type-literal": true,
+    "import-spacing": true,
+    "linebreak-style": [
+      true,
+      "LF"
+    ],
+    "max-classes-per-file": [
+      true,
+      1
+    ],
+    "no-angle-bracket-type-assertion": false,
+    "no-default-export": true,
+    "no-implicit-dependencies": [
+      true,
+      "dev"
+    ],
+    "no-invalid-this": [
+      true,
+      "check-function-in-method"
+    ],
+    "no-null-keyword": false,
+    "no-object-literal-type-assertion": true,
+    "no-require-imports": true,
+    "no-string-literal": true,
+    "no-switch-case-fall-through": true,
+    "no-use-before-declare": true,
+    "no-var-requires": false,
+    "object-literal-key-quotes": [
+      true,
+      "consistent-as-needed"
+    ],
+    "object-literal-sort-keys": false,
+    "ordered-imports": false,
+    "prefer-for-of": true,
+    "prefer-conditional-expression": [
+      true,
+      "check-else-if"
+    ],
+    "space-within-parens": false,
+    "space-in-parens": [
+      "error",
+      "never"
+    ],
+    "triple-equals": [
+      true,
+      "allow-null-check",
+      "allow-undefined-check"
+    ],
+    "variable-name": [
+      true,
+      "check-format",
+      "allow-leading-underscore",
+      "allow-pascal-case",
+      "ban-keywords"
+    ],
+    "whitespace": true,
+    "no-irregular-whitespace": true,
+    "no-sparse-arrays": true,
+    "space-before-function-paren": [
+      true,
+      {
+        "anonymous": "always",
+        "named": "never",
+        "asyncArrow": "always"
+      }
+    ],
+    "arrow-return-shorthand": [
+      true,
+      "multiline"
+    ],
+    "no-consecutive-blank-lines": [
+      true,
+      2
+    ],
+    "ban-comma-operator": true,
+    "curly": [
+      true,
+      "as-needed"
+    ],
+    "max-line-length": [
+      true,
+      100
+    ]
+  }
+}

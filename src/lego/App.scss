@@ -1,0 +1,26 @@
+@import "~bootstrap/scss/bootstrap.scss";
+
+.app {
+  @extend .container;
+
+  display: flex;
+  flex-direction: column;
+
+  border: 2px solid black;
+  padding: 0.5em;
+
+  height: 100vh;
+
+  .header {
+    height: 10vh;
+  }
+
+  .main {
+    flex: 1;
+  }
+
+  .footer {
+    border: 1px solid blue;
+    height: 10vh;
+  }
+}
