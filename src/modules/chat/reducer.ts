@@ -30,7 +30,8 @@ const chatInitialState: ChatState = {
         some text
         `,
         avatar: "some avatar",
-        timestamp: 1000
+        timestamp: Date.now(),
+        nostro: false
     }]
 };
 

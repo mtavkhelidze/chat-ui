@@ -1,0 +1,16 @@
+.byline {
+  padding-bottom: $ci-default-gap;
+
+  .byline-username {
+    font-weight: $ci-font-weight-bold;
+  }
+  .byline-timestamp {
+    font-weight: $ci-font-weight-bolder;
+    color: $ci-color-light-gray;
+    font-size: 0.8em;
+
+    &.nostro {
+      float: right;
+    }
+  }
+}

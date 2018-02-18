@@ -1,17 +1,12 @@
-import { combineReducers, createStore } from "redux";
+import { applyMiddleware, combineReducers, createStore } from "redux";
 
 import { chatReducer as chat, ChatState } from "./chat";
 import { userReducer as user, UserState } from "./user";
+import { transportMiddleware } from "./middleware";
 
 export interface ChatUIState {
     user: UserState;
     chat: ChatState;
-}
-
-export interface NetworkMessage {
-    avatar: string;
-    username: string;
-    text: string;
 }
 
 const rootReducer = combineReducers({
@@ -19,10 +14,9 @@ const rootReducer = combineReducers({
     chat
 } as any);
 
-const configureStore = () => createStore(
-    rootReducer,
-    (<any>window).__REDUX_DEVTOOLS_EXTENSION__ && (<any>window).__REDUX_DEVTOOLS_EXTENSION__()
-);
+const middlware = applyMiddleware(transportMiddleware);
+
+const configureStore = () => createStore(rootReducer, middlware);
 
 export {
     configureStore

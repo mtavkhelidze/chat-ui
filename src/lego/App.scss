@@ -2,7 +2,10 @@
 
 html, body {
   height: 100%;
-  font-size: 15px;
+  font-family: $ci-font-family;
+  font-size: $ci-font-size;
+  font-weight: $ci-font-weight;
+  color: $ci-font-color;
 }
 
 .app {

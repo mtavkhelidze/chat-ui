@@ -1,9 +1,10 @@
-import { NetworkMessage } from "../core";
+import { NetworkMessage } from "../transport";
 
 export const CHAT_APPEND_MESSAGE = "@chat/append-message";
 
 export interface ChatMessage extends NetworkMessage {
     timestamp: number;
+    nostro: boolean;
 }
 
 export interface ChatAppendMessageAction {
@@ -21,7 +22,8 @@ const chatAppendMessageAction = (msg: NetworkMessage): ChatAppendMessageAction =
             timestamp: Date.now(),
             avatar,
             username,
-            text
+            text,
+            nostro: false
         }
     });
 };

@@ -16,9 +16,10 @@ const makeChatMessageBrick = (m: ChatMessage, i: number) => (
     <ChatMessageBrick
         key={i}
         timestamp={m.timestamp}
-        avatar={m.avatar}
+        avatar="https://spotim-demo-chat-server.herokuapp.com/avatars/004-jigglypuff.png"
         username={m.username}
         text={m.text}
+        nostro={m.nostro}
     />
 );
 

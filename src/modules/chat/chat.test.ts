@@ -1,4 +1,5 @@
-import { ChatUIState, NetworkMessage } from "../core";
+import { ChatUIState } from "../core";
+import { NetworkMessage } from "../transport";
 
 import * as test from "tape";
 import * as deepFreeze from "deep-freeze";

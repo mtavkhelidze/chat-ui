@@ -12,6 +12,35 @@ const template = "./assets/index.html";
 
 const isProduction = () => process.env.NODE_ENV === "production";
 
+const sassOptions = {
+    data: "@import \"theme\";",
+    includePaths: [
+        path.resolve(__dirname, "./src"),
+        path.resolve(__dirname, "./node_modules")
+    ]
+};
+
+const styleLoaders = (prod) => {
+    let l = [];
+    if (!prod) {
+        l = l.concat([
+            {
+                loader: "style-loader"
+            }
+        ]);
+    }
+    l = l.concat([ {
+        loader: "css-loader", options: {
+            minimize: prod
+        }
+    },
+        {
+            loader: "sass-loader", options: sassOptions
+        }
+    ]);
+    return l;
+};
+
 config = {
     entry: [
         "./src/index.tsx"
@@ -25,7 +54,7 @@ config = {
     devtool: "source-map",
 
     resolve: {
-        extensions: [".ts", ".tsx", ".js", ".json"]
+        extensions: [ ".ts", ".tsx", ".js", ".json", ".scss" ]
 
     },
 
@@ -37,14 +66,13 @@ config = {
             },
             {
                 test: /\.scss$/,
-                loader: isProduction()
+                use: isProduction()
                     ? ExtractTextPlugin.extract({
                         fallback: "style-loader",
-                        use: "css-loader?minimize=true!sass-loader"
+                        use: styleLoaders(true)
                     })
-                    : "style-loader!css-loader!sass-loader"
+                    : styleLoaders(false)
             }
-
         ]
     },
     plugins: [
@@ -75,7 +103,7 @@ if (isProduction()) {
         ]
     });
 } else {
-    config.entry.concat(["webpack-dev-server/client?http://localhost:8080/"]);
+    config.entry.concat([ "webpack-dev-server/client?http://localhost:8080/" ]);
     config = merge(config, {
         plugins: [
             new webpack.NamedModulesPlugin()

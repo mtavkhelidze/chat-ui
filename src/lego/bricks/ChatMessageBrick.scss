@@ -4,14 +4,11 @@
 
   width: 80%;
 
-  margin-bottom: 2em;
-  margin-right: 1em;
+  margin-bottom: 3 * $ci-default-gap;
+  padding-right: 2 * $ci-default-gap;
 
-  .avatar {
-    padding: 0;
-    margin: 0;
-    width: 3em;
-    height: 3em;
+  &.nostro {
+    float: right;
   }
 
   .content {
@@ -20,19 +17,6 @@
     display: flex;
     flex-direction: column;
 
-    padding-left: 0.5em;
-
-    .byline {
-      margin-bottom: 0.5em;
-    }
-
-    > .text {
-      flex: 1;
-      border-bottom-left-radius: 20px;
-      border-top-right-radius: 20px;
-      border: 1px solid black;
-
-      padding: 0.5em;
-    }
+    padding-left: $ci-default-gap;
   }
 }

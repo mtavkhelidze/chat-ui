@@ -26,16 +26,12 @@
     "url": "https://github.com/mtavkhelidze/react-tabula-rasa/issues"
   },
   "dependencies": {
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
-    "serve": "^6.4.9"
-  },
-  "devDependencies": {
     "@types/deep-freeze": "^0.1.1",
     "@types/node": "^8.0.46",
     "@types/react-redux": "^5.0.15",
     "@types/sinon": "^4.1.3",
     "@types/socket.io": "^1.4.31",
+    "@types/socket.io-client": "^1.4.32",
     "@types/tape": "^4.2.31",
     "@types/uglify-js": "^2.6.29",
     "@types/webpack": "^3.0.13",
@@ -46,10 +42,14 @@
     "extract-text-webpack-plugin": "^3.0.2",
     "html-webpack-plugin": "^2.30.1",
     "html-webpack-template": "^5.6.0",
+    "moment": "^2.20.1",
     "node-sass": "^4.5.3",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
     "react-redux": "^5.0.7",
     "redux": "^3.7.2",
     "sass-loader": "^6.0.6",
+    "serve": "^6.4.9",
     "sinon": "^4.3.0",
     "socket.io-client": "^2.0.4",
     "source-map-loader": "^0.2.2",

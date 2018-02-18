@@ -1,0 +1,15 @@
+.message-text {
+  flex: 1;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+
+  padding: 2 * $ci-default-gap;
+
+  background-color: $ci-vostro-color;
+  color: $ci-font-color-inverse;
+
+  &.nostro {
+    background-color: $ci-color-light-gray;
+    color: $ci-font-color-dark;
+  }
+}
