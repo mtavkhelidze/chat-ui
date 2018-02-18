@@ -1,5 +1,5 @@
 import { ChatUIState } from "../core";
-import { NetworkMessage } from "../transport";
+import { NetworkMessage } from "../network";
 
 import * as test from "tape";
 import * as deepFreeze from "deep-freeze";
@@ -26,7 +26,8 @@ test("Module | chat", t => {
                 timestamp: ts,
                 avatar: msg.avatar,
                 username: msg.username,
-                text: msg.text
+                text: msg.text,
+                nostro: false
             }]
         }
     };

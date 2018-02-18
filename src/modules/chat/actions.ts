@@ -1,4 +1,4 @@
-import { NetworkMessage } from "../transport";
+import { NetworkMessage } from "../network";
 
 export const CHAT_APPEND_MESSAGE = "@chat/append-message";
 

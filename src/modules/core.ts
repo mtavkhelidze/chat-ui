@@ -2,7 +2,7 @@ import { applyMiddleware, combineReducers, createStore } from "redux";
 
 import { chatReducer as chat, ChatState } from "./chat";
 import { userReducer as user, UserState } from "./user";
-import { transportMiddleware } from "./middleware";
+import { transportMiddleware } from "./transport";
 
 export interface ChatUIState {
     user: UserState;
