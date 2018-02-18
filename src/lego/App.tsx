@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import "./App.scss";
+import "../theme.scss";
 
 import { ChatWindowTile, InputWindowTile } from "./tiles";
 import { LogoBrick } from "./bricks";

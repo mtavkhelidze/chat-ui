@@ -1,7 +1,5 @@
 import * as React from "react";
 
-import "./LogoBrick.scss";
-
 /* tslint:disable-next-line */
 const logo = require("../../assets/spotim-logo.jpg");
 

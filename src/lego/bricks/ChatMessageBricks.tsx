@@ -1,8 +1,6 @@
 import * as React from "react";
 import { ChatMessage, cx } from "../../modules";
 
-import "./ChatMessageBrick.scss";
-
 import { AvatarBrick } from "./AvatarBrick";
 import { BylineBrick } from "./BylineBrick";
 import { MessageTextBrick } from "./MessageTextBrick";

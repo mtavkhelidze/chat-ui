@@ -1,7 +1,5 @@
 import * as React from "react";
 
-import "./AvatarBrick.scss";
-
 interface Props {
     src: string;
     alt: string;

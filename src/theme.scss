@@ -1,3 +1,5 @@
+@import "~bootstrap/scss/bootstrap.scss";
+
 // Typography
 $ci-font-family: "Helvetica", "Roboto", "Arial", "sans serif";
 $ci-font-size: 13pt;
@@ -15,3 +17,14 @@ $primary: #0082DD;
 // Layout
 $ci-avatar-size: 3em;
 $ci-default-gap: 0.5em;
+
+@import "./lego/bricks/AvatarBrick";
+@import "./lego/bricks/BylineBrick";
+@import "./lego/bricks/ChatMessageBrick";
+@import "./lego/bricks/InputChatMessageBrick";
+@import "./lego/bricks/InputUserNameBrick";
+@import "./lego/bricks/LogoBrick";
+@import "./lego/bricks/MessageTextBrick";
+@import "./lego/tiles/ChatWindowTile";
+@import "./lego/tiles/InputWindowTile";
+@import "./lego/App";

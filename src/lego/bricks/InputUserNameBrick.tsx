@@ -1,7 +1,5 @@
 import * as React from "react";
 
-import "./InputUserNameBrick.scss";
-
 interface OwnProps {
     onUpdate: (text: string) => void;
     username: string;

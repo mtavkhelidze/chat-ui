@@ -1,7 +1,5 @@
 import * as React from "react";
 
-import "./InputChatMessageBrick.scss";
-
 interface OwnProps {
     onSubmit: (text: string) => void;
 }

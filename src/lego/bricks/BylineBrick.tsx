@@ -2,8 +2,6 @@ import * as React from "react";
 
 import { cx, tsString } from "../../modules";
 
-import "./BylineBrick.scss";
-
 interface Props {
     username: string | null;
     timestamp: number;

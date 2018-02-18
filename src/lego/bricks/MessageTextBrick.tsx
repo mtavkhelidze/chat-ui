@@ -2,8 +2,6 @@ import * as React from "react";
 
 import { cx, ensureLineBreaks } from "../../modules";
 
-import "./MessageTextBrick.scss";
-
 interface Props {
     nostro: boolean;
     text: string;

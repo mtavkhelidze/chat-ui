@@ -8,7 +8,8 @@
     "build": "NODE_ENV=production webpack --config webpack.config.js",
     "clean": "rm -fr dist",
     "lint": "tslint --project .",
-    "test": "tape -r ts-node/register src/**/*.test.ts | tap-spec"
+    "test": "tape -r ts-node/register src/**/*.test.ts | tap-spec",
+    "serve": "serve dist"
   },
   "keywords": [
     "react",
@@ -50,7 +51,7 @@
     "react-redux": "^5.0.7",
     "redux": "^3.7.2",
     "sass-loader": "^6.0.6",
-    "serve": "^6.4.9",
+    "serve": "^6.4.10",
     "sinon": "^4.3.0",
     "socket.io-client": "^2.0.4",
     "source-map-loader": "^0.2.2",

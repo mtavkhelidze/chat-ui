@@ -12,14 +12,6 @@ const template = "./src/assets/index.html";
 
 const isProduction = () => process.env.NODE_ENV === "production";
 
-const sassOptions = {
-    data: "@import \"theme\"; @import \"bootstrap/scss/bootstrap.scss\";",
-    includePaths: [
-        path.resolve(__dirname, "./src"),
-        path.resolve(__dirname, "./node_modules")
-    ]
-};
-
 const styleLoaders = (prod) => {
     let l = [];
     if (!prod) {
@@ -36,7 +28,7 @@ const styleLoaders = (prod) => {
             }
         },
         {
-            loader: "sass-loader", options: sassOptions
+            loader: "sass-loader"
         }
     ]);
     return l;
