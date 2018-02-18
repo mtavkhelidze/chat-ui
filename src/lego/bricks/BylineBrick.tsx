@@ -12,7 +12,7 @@ interface Props {
 const BylineBrick: React.StatelessComponent<Props> = ({ username, timestamp }) => (
     <div className="byline">
         {username && (
-            <span><span className="byline-username">{username}</span>,&nbsp;</span>
+            <span className="byline-username">{username}&nbsp;</span>
         )}
         <span className={cx("byline-timestamp", !username)}>
             {tsString(timestamp)}

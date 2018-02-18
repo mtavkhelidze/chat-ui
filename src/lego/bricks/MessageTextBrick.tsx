@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { cx } from "../../modules";
+import { cx, ensureLineBreaks } from "../../modules";
 
 import "./MessageTextBrick.scss";
 
@@ -10,7 +10,7 @@ interface Props {
 }
 
 const MessageTextBrick: React.StatelessComponent<Props> = ({ nostro, text }) => (
-    <div className={cx("message-text", nostro)}>{text}</div>
+    <div className={cx("message-text", nostro)}>{ensureLineBreaks(text)}</div>
 );
 
 export {

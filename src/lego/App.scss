@@ -6,24 +6,32 @@ html, body {
   color: $ci-font-color;
 }
 
+#app {
+  background-color: $ci-color-light-gray;
+}
+
 .app {
   @extend .container;
 
   display: flex;
   flex-direction: column;
   height: 100vh;
+  background-color: white;
 
-  > .header {
-    height: 10em;
-    border-bottom: 1px darkgrey outset;
+  .header {
+    min-height: 3em;
+    margin-left: -2 * $ci-default-gap;
+    margin-right: -2 * $ci-default-gap;
   }
 
   > .main {
+    flex: 1;
     overflow-y: auto;
     min-height: 0;
+    margin-top: 2 * $ci-default-gap;
   }
 
   > .footer {
-    min-height: 10em;
+    min-height: 12em;
   }
 }

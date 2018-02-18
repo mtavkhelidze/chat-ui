@@ -5,34 +5,7 @@ export interface ChatState {
 }
 
 const chatInitialState: ChatState = {
-    messages: [{
-        username: "Misha",
-        text: `
-        some text
-        some text
-        some text
-        some text
-        some text
-        some text
-        some text
-        some text
-        some text
-        some text
-        some text
-        some text
-        some text
-        some text
-        some text
-        some text
-        some text
-        some text
-        some text
-        some text
-        `,
-        avatar: "some avatar",
-        timestamp: Date.now(),
-        nostro: false
-    }]
+    messages: []
 };
 
 const chatReducer = (
@@ -41,7 +14,7 @@ const chatReducer = (
 
     if (type === CHAT_APPEND_MESSAGE)
         return {
-            messages: [...state.messages, message]
+            messages: [...state.messages, message as ChatMessage]
         };
 
     return state;

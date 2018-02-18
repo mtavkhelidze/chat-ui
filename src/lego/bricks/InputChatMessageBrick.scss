@@ -1,0 +1,13 @@
+.input-chat-message {
+  @extend .form-group;
+  margin-top: $ci-default-gap;
+
+  .input-chat-message-text {
+    @extend .form-control;
+  }
+  .help {
+    float: right;
+    font-size: 0.7em;
+    color: $ci-color-light-gray;
+  }
+}

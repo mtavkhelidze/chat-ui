@@ -1,4 +1,4 @@
-import { serializeUser } from "../../serial";
+import { serializeUser } from "../serial";
 
 export const USER_SET_NAME = "@user/set-name";
 
@@ -12,7 +12,7 @@ export interface UserSetPropsAction {
 
 export type UserAction = UserSetPropsAction;
 
-const userSetNameAction = (name: string, avatar: string): UserSetPropsAction => {
+const userSetPropsAction = (name: string, avatar: string): UserSetPropsAction => {
     serializeUser({ name, avatar });
     return {
         type: USER_SET_NAME,
@@ -24,5 +24,5 @@ const userSetNameAction = (name: string, avatar: string): UserSetPropsAction => 
 };
 
 export {
-    userSetNameAction
+    userSetPropsAction
 };

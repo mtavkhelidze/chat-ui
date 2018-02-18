@@ -16,7 +16,7 @@ const makeChatMessageBrick = (m: ChatMessage, i: number) => (
     <ChatMessageBrick
         key={i}
         timestamp={m.timestamp}
-        avatar="https://spotim-demo-chat-server.herokuapp.com/avatars/004-jigglypuff.png"
+        avatar={m.avatar}
         username={m.username}
         text={m.text}
         nostro={m.nostro}
@@ -24,36 +24,33 @@ const makeChatMessageBrick = (m: ChatMessage, i: number) => (
 );
 
 class ChatWindowTileClass extends React.Component<Props, {}> {
+    private messagesEnd: any;
+
+    public componentDidMount() {
+        this.scrollToBottom();
+    }
+
+    public componentDidUpdate() {
+        this.scrollToBottom();
+    }
+
     public render() {
         const list = this.props.messages.map(makeChatMessageBrick);
         return (
             <div className="chat-window-tile">
                 {list}
-                {list}
-                {list}
-                {list}
-                {list}
-                {list}
-                {list}
-                {list}
-                {list}
-                {list}
-                {list}
-                {list}
-                {list}
-                {list}
-                {list}
-                {list}
-                {list}
-                {list}
-                {list}
-                {list}
-                {list}
-                {list}
-                {list}
+                <div style={{ float: "left", clear: "both" }}
+                     ref={el => {
+                         this.messagesEnd = el;
+                     }}>
+                </div>
             </div>
         );
     }
+
+    private scrollToBottom = () => {
+        this.messagesEnd.scrollIntoView({ behavior: "smooth" });
+    };
 }
 
 const mapStateToProps = (state: ChatUIState): StateProps => ({

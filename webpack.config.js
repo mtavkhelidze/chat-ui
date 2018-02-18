@@ -8,7 +8,7 @@ const merge = require("webpack-merge");
 const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const template = "./assets/index.html";
+const template = "./src/assets/index.html";
 
 const isProduction = () => process.env.NODE_ENV === "production";
 
@@ -29,11 +29,12 @@ const styleLoaders = (prod) => {
             }
         ]);
     }
-    l = l.concat([ {
-        loader: "css-loader", options: {
-            minimize: prod
-        }
-    },
+    l = l.concat([
+        {
+            loader: "css-loader", options: {
+                minimize: prod
+            }
+        },
         {
             loader: "sass-loader", options: sassOptions
         }
@@ -63,6 +64,10 @@ config = {
             {
                 test: /\.tsx?$/,
                 loader: "ts-loader"
+            },
+            {
+                test: /\.(jpe?g|png|gif|svg)$/i,
+                loader: "file-loader?[name].[ext]",
             },
             {
                 test: /\.scss$/,

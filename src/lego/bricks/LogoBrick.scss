@@ -1,0 +1,21 @@
+.chat-logo {
+  flex: 1;
+
+  background-color: $primary;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: $ci-default-gap;
+  .chat-logo-image {
+    height: 2em;
+    width: auto;
+    padding-right: 2 * $ci-default-gap;
+  }
+  h3 {
+    padding: 0;
+    margin: 0;
+    color: white;
+  }
+}

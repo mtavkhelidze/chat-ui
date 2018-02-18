@@ -1,3 +1,4 @@
+import * as React from "react";
 import * as moment from "moment";
 
 const isProd = () => process.env.NODE_ENV === "production";
@@ -5,7 +6,11 @@ const isDev = () => !isProd();
 
 const cx = (name: string, nostro: boolean) => nostro ? `${name} nostro` : name;
 
-const tsString = (timestamp: number) => moment(timestamp).fromNow();
+const tsString = (timestamp: number) => moment(timestamp).calendar();
+
+const ensureLineBreaks = (text: string) =>
+    text.split("\n").map((l, i) => <span key={i}>{l}<br/></span>);
+
 
 const randomAvatar = () => {
     const a = [
@@ -78,5 +83,6 @@ export {
     cx,
     tsString,
     randomUsername,
-    randomAvatar
+    randomAvatar,
+    ensureLineBreaks,
 };

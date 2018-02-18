@@ -1,48 +1,60 @@
 import * as React from "react";
-import { InputUsernameBrick } from "../bricks/InputUserNameBrick";
-import { ChatUIState, randomAvatar, randomUsername } from "../../modules";
-import { connect, Dispatch } from "react-redux";
+import { connect, MapDispatchToProps } from "react-redux";
+
+import "./InputWindowTile.scss";
+
 import {
-    UserAction,
-    userSetNameAction,
-    UserSetPropsAction
-} from "../../modules/user";
-import { selectUserAvatar, selectUserName } from "../../modules/user/selectors";
+    chatSendMessageAction,
+    ChatUIState, randomAvatar,
+    selectUserAvatar,
+    selectUserName,
+    userSetPropsAction
+} from "../../modules";
+
+import { InputUsernameBrick, InputChatMessageBrick } from "../bricks";
 
 interface DispatchProps {
-    saveUsername: (username: string, avatar: string) => UserSetPropsAction;
+    saveUsername: typeof userSetPropsAction;
+    sendMessage: typeof chatSendMessageAction;
 }
 
-interface StateProps {
+interface OwnProps {
     username: string;
     avatar: string;
 }
 
-type Props = DispatchProps & StateProps;
+type Props = DispatchProps & OwnProps;
 
 class InputWindowTileClass extends React.Component<Props, {}> {
     public render() {
         return (
-            <InputUsernameBrick
-                username={this.props.username || randomUsername()}
-                onUpdate={this.onSetUsername}
-            />
+            <div className="input-window">
+                <InputUsernameBrick
+                    username={this.props.username}
+                    onUpdate={this.onSetUsername}
+                />
+                <InputChatMessageBrick onSubmit={this.onSendMessage} />
+            </div>
         );
     }
 
     private onSetUsername = (username: string) => {
-        this.props.saveUsername(username, this.props.avatar || randomAvatar());
-    }
+        this.props.saveUsername(username, randomAvatar());
+    };
+
+    private onSendMessage = (text: string) => {
+        this.props.sendMessage(this.props.username, this.props.avatar, text);
+    };
 }
 
-const mapStateToProps = (state: ChatUIState): StateProps => ({
+const mapStateToProps = (state: ChatUIState): OwnProps => ({
     username: selectUserName(state),
     avatar: selectUserAvatar(state)
 });
 
-const mapDispatchToProps = (dispatch: Dispatch<UserAction>) => ({
-    saveUsername: (username: string, avatar: string) =>
-        dispatch(userSetNameAction(username, avatar))
+const mapDispatchToProps: MapDispatchToProps<DispatchProps, {}> = ({
+    saveUsername: userSetPropsAction,
+    sendMessage: chatSendMessageAction
 });
 
 const InputWindowTile = connect(mapStateToProps, mapDispatchToProps)(InputWindowTileClass);

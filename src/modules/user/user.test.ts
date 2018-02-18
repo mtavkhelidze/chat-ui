@@ -3,7 +3,7 @@ import { ChatUIState } from "../core";
 import * as test from "tape";
 import * as deepFreeze from "deep-freeze";
 
-import { userReducer, userSetNameAction } from "./index";
+import { userReducer, userSetPropsAction } from "./index";
 import { selectUserAvatar, selectUserName } from "./selectors";
 import { userInitialState } from "./reducer";
 
@@ -20,7 +20,7 @@ test("Module | user", t => {
     };
     deepFreeze(after);
     t.deepEqual(
-        userReducer(userInitialState, userSetNameAction(name, avatar)),
+        userReducer(userInitialState, userSetPropsAction(name, avatar)),
         after.user,
         "reducer sets user.name"
     );

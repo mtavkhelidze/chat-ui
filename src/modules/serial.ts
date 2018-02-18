@@ -1,4 +1,4 @@
-import { UserState } from "./modules";
+import { UserState } from "./index";
 
 import * as Cookie from "universal-cookie";
 
