@@ -1,7 +1,6 @@
 import * as React from "react";
-import * as moment from "moment";
 
-import { cx } from "../../modules";
+import { cx, tsString } from "../../modules";
 
 import "./BylineBrick.scss";
 
@@ -16,7 +15,7 @@ const BylineBrick: React.StatelessComponent<Props> = ({ username, timestamp }) =
             <span className="byline-username">{username},&nbsp;</span>
         )}
         <span className={cx("byline-timestamp", !username)}>
-            {moment(timestamp).fromNow()}
+            {tsString(timestamp)}
             </span>
     </div>
 );
