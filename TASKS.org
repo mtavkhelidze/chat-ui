@@ -1,10 +1,9 @@
 * DONE CIMUI-001 Scaffolding
 * DONE CIMUI-011 User selector
 * DONE CIMUI-020 Chat reducer
-* TODO CIMUI-060 ChatMessage
-* CIMUI-070 Avatar
-* CIMUI-021 Socket.IO middlware
-* CIMUI-012 Coolkies
-* CIMUI-030 InputText
-* CIMUI-040 Button
-* CIMUI-050 InputTextArea
+* DONE CIMUI-060 ChatMessage
+* DONE CIMUI-070 Avatar
+* DONE CIMUI-021 Socket.IO middlware
+* DONE CIMUI-012 Coolkies
+* DONE CIMUI-030 InputText
+* DONE CIMUI-31 Screenshot
