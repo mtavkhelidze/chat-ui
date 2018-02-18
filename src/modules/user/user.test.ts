@@ -29,7 +29,7 @@ test("Module | user", t => {
         "selectUserName returns user.name");
 
     t.equal(avatar, selectUserAvatar(after as ChatUIState),
-        "selectUserName returns user.avatar");
+        "selectUserAvatar returns user.avatar");
 
     t.end();
 });
