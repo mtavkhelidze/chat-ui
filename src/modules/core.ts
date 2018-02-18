@@ -1,8 +1,10 @@
 import { applyMiddleware, combineReducers, createStore } from "redux";
+import { composeWithDevTools } from "redux-devtools-extension";
 
-import { chatReducer as chat, ChatState } from "./chat";
+import { chatInitialState, chatReducer as chat, ChatState } from "./chat";
 import { userReducer as user, UserState } from "./user";
 import { transportMiddleware } from "./transport";
+import { desrializeUser } from "../serial";
 
 export interface ChatUIState {
     user: UserState;
@@ -14,9 +16,20 @@ const rootReducer = combineReducers({
     chat
 } as any);
 
-const middlware = applyMiddleware(transportMiddleware);
+const middleware = applyMiddleware(
+    transportMiddleware
+);
 
-const configureStore = () => createStore(rootReducer, middlware);
+const preloadedState: ChatUIState = {
+    user: desrializeUser(),
+    chat: chatInitialState
+};
+
+const configureStore = () => createStore(
+    rootReducer,
+    preloadedState,
+    composeWithDevTools(middleware)
+);
 
 export {
     configureStore

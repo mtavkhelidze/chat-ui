@@ -1,0 +1,10 @@
+.input-username {
+  @extend .input-group;
+  @extend .input-group-sm;
+
+  margin-top: 2 * $ci-default-gap;
+  padding: $ci-default-gap;
+  .btn {
+    float: right;
+  }
+}

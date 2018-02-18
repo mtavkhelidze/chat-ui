@@ -34,9 +34,8 @@ const transportInit = (channel: string, dispatch: Dispatch<ChatAction>) => {
 };
 
 const transportMiddleware: Middleware =
-    (api: MiddlewareAPI<void>) => (next: Dispatch<void>) => <A extends Action>(action: A) => {
-        return next(action);
-    };
+    (api: MiddlewareAPI<void>) => (next: Dispatch<void>) => <A extends Action>(action: A) =>
+        next(action);
 
 export {
     transportMiddleware,

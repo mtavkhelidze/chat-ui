@@ -2,10 +2,12 @@ import { USER_SET_NAME, UserAction } from "./actions";
 
 export interface UserState {
     name: string;
+    avatar: string;
 }
 
 const userInitialState: UserState = {
-    name: ""
+    name: "",
+    avatar: ""
 };
 
 const userReducer = (state: UserState = userInitialState, action: UserAction) => {

@@ -24,6 +24,10 @@
         "each"
       ]
     ],
+    "semicolon": [
+      true,
+      "ignore-bound-class-methods"
+    ],
     "interface-name": false,
     "interface-over-type-literal": true,
     "import-spacing": true,

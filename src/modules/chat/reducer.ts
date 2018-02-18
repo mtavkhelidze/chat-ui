@@ -38,11 +38,12 @@ const chatInitialState: ChatState = {
 const chatReducer = (
     state: ChatState = chatInitialState, action: ChatAction): ChatState => {
     const { type, message } = action;
-    if (type === CHAT_APPEND_MESSAGE) {
+
+    if (type === CHAT_APPEND_MESSAGE)
         return {
             messages: [...state.messages, message]
         };
-    }
+
     return state;
 };
 

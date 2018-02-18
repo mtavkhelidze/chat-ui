@@ -1,5 +1,3 @@
-@import "~bootstrap/scss/bootstrap.scss";
-
 html, body {
   height: 100%;
   font-family: $ci-font-family;
@@ -26,6 +24,6 @@ html, body {
   }
 
   > .footer {
-    height: 20em;
+    min-height: 10em;
   }
 }

@@ -56,7 +56,7 @@ class ChatWindowTileClass extends React.Component<Props, {}> {
     }
 }
 
-const mapStateToProps = (state: ChatUIState) => ({
+const mapStateToProps = (state: ChatUIState): StateProps => ({
     messages: selectChatMessages(state)
 });
 

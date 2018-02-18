@@ -13,7 +13,7 @@ const template = "./assets/index.html";
 const isProduction = () => process.env.NODE_ENV === "production";
 
 const sassOptions = {
-    data: "@import \"theme\";",
+    data: "@import \"theme\"; @import \"bootstrap/scss/bootstrap.scss\";",
     includePaths: [
         path.resolve(__dirname, "./src"),
         path.resolve(__dirname, "./node_modules")
