@@ -1,0 +1,5 @@
+- Test coverage isn't 100%
+- SCSS module management is somewhat bloated (perhaps, get rid of Bootstrap)
+- Nostro/vostro message differentiation is somewhat bloated
+- No chat history (don't get it from a server)
+- What happens when there's a usernaname collision?

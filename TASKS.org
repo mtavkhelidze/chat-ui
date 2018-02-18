@@ -1,9 +1,0 @@
-* DONE CIMUI-001 Scaffolding
-* DONE CIMUI-011 User selector
-* DONE CIMUI-020 Chat reducer
-* DONE CIMUI-060 ChatMessage
-* DONE CIMUI-070 Avatar
-* DONE CIMUI-021 Socket.IO middlware
-* DONE CIMUI-012 Coolkies
-* DONE CIMUI-030 InputText
-* DONE CIMUI-31 Screenshot
